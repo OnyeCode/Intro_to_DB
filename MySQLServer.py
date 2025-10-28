@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 try:
-    mycursor.execute("CREATE DATABASE alx_book_store")
+    mycursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
 except EXCEPTION as e:
     print(e)
 else:
